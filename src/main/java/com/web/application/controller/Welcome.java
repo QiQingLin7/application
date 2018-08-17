@@ -34,7 +34,6 @@ public class Welcome {
     @ResponseBody
     @PostMapping("/list")
     public List<User> list() {
-        //        Gson gson = new Gson();
         return service.selAll();
     }
 
