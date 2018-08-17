@@ -7,7 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    //登录
+    
     User selectUserNameAndPassword(User user);
 
     List<User> selAll();
