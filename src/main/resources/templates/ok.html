@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            var tbody = document.getElementById("tbody");
+            $.ajax({
+                type: "post",
+                url: '/list',
+                contentType: "application/json;charset=utf-8",
+                data: {},
+                success: function (data) {
+                    //清空数据
+                    $("#tbody").html('');
+                    //追加数据
+                    $.each(data, function (i, data) {
+                        $("#tbody").append("<tr>" +
+                            "<td>" + data.id + "</td>" +
+                            "<td>" + data.username + "</td>" +
+                            "<td>" + data.password + "</td>" +
+                            "<td><input type='button' id='updBtn' value='修改' onclick= 'jump(" + data.id + ")'/>" + "&nbsp&nbsp&nbsp&nbsp" +
+                            "<input type='button' id='delBtn' value='删除' onclick='del(" + data.id + ")'/></td>" +
+                            "</tr>");
+                    });
+                },
+                error: function () {
+                    window.alert("查询失败");
+                }
+            });
+        });
+
+        function del(id) {
+            $.ajax({
+                type: "delete",
+                url: "/delete/" + id,
+                dataType: 'json',
+                async: true,
+                success: function () {
+                    alert("删除成功");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+</body>
+</html>

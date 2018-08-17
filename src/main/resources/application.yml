@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 20000928
+    hikari:
+      maximum-pool-size: 15
+      minimum-idle: 5
+      max-lifetime: 1800000
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      connection-timeout: 30000
+      connection-test-query: select 1 from dual
+    url: jdbc:mysql://127.0.0.1:3306/Tang?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    cache: false
+    check-template-location: true
+mybatis:
+  mapper-locations: mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.web.application.model
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+server:
+  error:
+    path: /error
