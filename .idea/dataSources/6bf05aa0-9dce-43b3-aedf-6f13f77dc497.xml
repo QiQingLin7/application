@@ -1110,144 +1110,27 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="279" parent="2" name="Tickets"/>
-    <table id="280" parent="2" name="t_orders"/>
-    <table id="281" parent="2" name="t_stadia"/>
-    <table id="282" parent="2" name="t_user"/>
-    <column id="283" parent="279" name="TicketId">
-      <Position>1</Position>
-      <Comment>门票编号</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="284" parent="279" name="TicketName">
-      <Position>2</Position>
-      <Comment>门票编号</Comment>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="285" parent="279" name="StadiumId">
-      <Position>3</Position>
-      <Comment>场馆编号</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="286" parent="279" name="BeginTime">
-      <Position>4</Position>
-      <Comment>比赛开始时间</Comment>
-      <DataType>datetime|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="287" parent="279" name="TotalCount">
-      <Position>5</Position>
-      <Comment>总票数</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="288" parent="279" name="OrderCount">
-      <Position>6</Position>
-      <Comment>已销售的门票数</Comment>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="289" parent="279" name="Price">
-      <Position>7</Position>
-      <Comment>门票价格</Comment>
-      <DataType>double|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="290" parent="279" name="Descn">
-      <Position>8</Position>
-      <Comment>门票说明</Comment>
-      <DataType>varchar(50)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="291" parent="279" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>TicketId</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="292" parent="280" name="OrdersId">
-      <Position>1</Position>
-      <Comment>销售编号</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="293" parent="280" name="TicketId">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="294" parent="280" name="IdCard">
-      <Position>3</Position>
-      <Comment>身份证号</Comment>
-      <DataType>varchar(18)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="295" parent="280" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>OrdersId</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="296" parent="281" name="StadiumId">
-      <Position>1</Position>
-      <Comment>场馆编号</Comment>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="297" parent="281" name="Name">
-      <Position>2</Position>
-      <Comment>场馆名称</Comment>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="298" parent="281" name="Address">
-      <Position>3</Position>
-      <Comment>场馆地址</Comment>
-      <DataType>varchar(50)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="299" parent="281" name="Descn">
-      <Position>4</Position>
-      <Comment>场馆说明</Comment>
-      <DataType>varchar(1024)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="300" parent="281" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>StadiumId</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="301" parent="282" name="id">
+    <table id="279" parent="2" name="t_user"/>
+    <column id="280" parent="279" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="282" name="username">
+    <column id="281" parent="279" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="282" name="password">
+    <column id="282" parent="279" name="password">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="304" parent="282" name="PRIMARY">
+    <key id="283" parent="279" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

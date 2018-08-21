@@ -1,12 +1,13 @@
 package com.web.application.domain;
 
+import com.web.application.util.Entity;
 
-import com.util.Entity;
 
 public class User extends Entity {
-
     private Integer id;
+
     private String username;
+
     private String password;
 
     public Integer getId() {

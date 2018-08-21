@@ -29,6 +29,24 @@
         <option name="javaModelPath" value="$PROJECT_DIR$/src/main/java" />
         <option name="tableGenerateConfigs">
           <map>
+            <entry key="Tang:t_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="TUser" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="Tang:t_user_money">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="TUserMoney" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
             <entry key="Tang@127.0.0.1:Tickets">
               <value>
                 <TableGenerateConfig>
@@ -52,6 +70,24 @@
                 <TableGenerateConfig>
                   <option name="generatedKey" value="StadiumId" />
                   <option name="javaModelName" value="TStadia" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="Tang@127.0.0.1:t_student">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="TStudent" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="Tang@127.0.0.1:t_user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="User" />
                   <option name="useActualColumnName" value="false" />
                 </TableGenerateConfig>
               </value>

@@ -13,9 +13,8 @@ spring:
       connection-timeout: 30000
       connection-test-query: select 1 from dual
     url: jdbc:mysql://127.0.0.1:3306/Tang?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
     encoding: UTF-8
     cache: false
     check-template-location: true
