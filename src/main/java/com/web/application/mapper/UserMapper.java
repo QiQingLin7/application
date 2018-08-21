@@ -3,6 +3,9 @@ package com.web.application.mapper;
 import com.web.application.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
+/***
+ * Mapper接口
+ */
 @Mapper
 public interface UserMapper {
 
