@@ -1,0 +1,28 @@
+#模拟转帐
+
+table
+
+balance
+
+int id
+double money;
+
+user
+
+int id
+int name
+
+
+info
+
+int id
+
+
+
+select name,money from balance,user where balance.id = user.id;
+
+转出
+update balance set money-#{money} where id = #{id}
+
+收到
+update balance set money+#{money} where id = #{id}
