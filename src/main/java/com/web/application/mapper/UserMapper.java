@@ -11,15 +11,17 @@ public interface UserMapper {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
+    int insert(User user);
 
-    int insertSelective(User record);
+    int insertSelective(User user);
 
     User selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(User record);
+    int updateByPrimaryKeySelective(User user);
 
-    int updateByPrimaryKey(User record);
+    int updateByPrimaryKey(User user);
 
     User selectByNameAndPassword(User user);
+
+    User selectAll();
 }

@@ -31,3 +31,4 @@ pagehelper:
 server:
   error:
     path: /error
+  port: 7777

@@ -11,9 +11,11 @@ public interface UserService {
 
     int deleteByPrimaryKey(Integer id);
 
-    int insert(User record);
+    int insert(User user);
 
     User selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(User record);
+    int updateByPrimaryKeySelective(User user);
+
+    User selectAll();
 }
