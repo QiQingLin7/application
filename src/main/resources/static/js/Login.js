@@ -2,7 +2,7 @@ function Login() {
     const username = $("input[name='username']").val().trim();
     const password = $("input[name='password']").val().trim();
     $.ajax({
-        url: '/Login',
+        url: '/login',
         type: 'POST',
         dataType: 'JSON',
         data: {

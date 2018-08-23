@@ -5,6 +5,7 @@ import com.web.application.domain.User;
 import com.web.application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
@@ -23,8 +24,7 @@ public class LoginController {
         this.service = service;
     }
 
-    @Permission
-    @PostMapping(value = "/Login")
+    @PostMapping(value = "/login")
     public Boolean Login(User user, String username, String password, HttpSession session) {
         user.setUsername(username);
         user.setPassword(password);

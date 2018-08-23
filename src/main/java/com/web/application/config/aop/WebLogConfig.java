@@ -32,10 +32,9 @@ public class WebLogConfig {
      * 通过连接点切入
      */
     @Before(value = "WebLogConfig()")
-    public void doBefore(JoinPoint joinPoint) throws RuntimeException {
+    public void doBefore(JoinPoint joinPoint) {
+        System.err.println("进入Before切面");
         logger.info("前置通知：");
-        System.err.println("进入doBefore切面");
-
         // 接收到请求，记录请求内容
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         assert attributes != null;
@@ -51,8 +50,9 @@ public class WebLogConfig {
     }
 
     @AfterReturning(returning = "ret", pointcut = "WebLogConfig()")
-    public void doAfterReturning(Object ret) throws RuntimeException {
-        // 处理完请求，返回内容
+    public void doAfterReturning(Object ret) {
+
+        /* 处理完请求，返回内容*/
         logger.info("后置通知：");
         logger.info("RESPONSE : " + ret);
     }

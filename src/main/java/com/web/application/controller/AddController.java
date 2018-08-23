@@ -1,9 +1,14 @@
 package com.web.application.controller;
 
+import com.web.application.domain.User;
 import com.web.application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 /**
  * Author     ：漆庆林
@@ -19,8 +24,16 @@ public class AddController {
         this.service = service;
     }
 
-    @PutMapping("/Add/")
-    public String AddUser() {
+    @PutMapping(value = "/add/")
+    public User AddUser(User user, @RequestParam("id") Integer id,
+                        @RequestParam("username") String username,
+                        @RequestParam("password") String password) {
+
+        user.setId(id);
+        user.setUsername(username);
+        user.setPassword(password);
+
+
         return null;
     }
 }

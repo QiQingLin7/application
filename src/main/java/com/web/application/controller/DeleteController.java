@@ -1,9 +1,11 @@
 package com.web.application.controller;
 
+import com.web.application.domain.User;
 import com.web.application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -22,12 +24,15 @@ public class DeleteController {
     }
 
     @DeleteMapping(value = "del/{id}")
-    public void Delete(@PathVariable("id") Integer id) {
-        int i = service.deleteByPrimaryKey(id);
-        if (1 != i) {
-            System.out.println("删除完成");
-        } else {
-            System.out.println("删除失败");
+    public Boolean Delete(@PathVariable("id") Integer id) {
+        User user = service.selectByPrimaryKey(id);
+        if (null == user) {
+            System.out.println("用户不存在");
+            return false;
         }
+        service.deleteByPrimaryKey(id);
+        System.out.println("删除成功");
+        return true;
+
     }
 }

@@ -22,7 +22,7 @@ public class ListAllAndPage {
         this.service = service;
     }
 
-    @PostMapping(value = "/List")
+    @PostMapping(value = "/list")
     public String List() {
         User user = service.selectAll();
         Gson gson = new Gson();
