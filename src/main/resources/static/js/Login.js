@@ -1,5 +1,7 @@
 function Login() {
+    // language=JQuery-CSS
     const username = $("input[name='username']").val().trim();
+    // language=JQuery-CSS
     const password = $("input[name='password']").val().trim();
     $.ajax({
         url: '/login',

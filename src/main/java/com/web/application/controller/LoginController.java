@@ -1,11 +1,9 @@
 package com.web.application.controller;
 
-import com.web.application.config.Permission;
 import com.web.application.domain.User;
 import com.web.application.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
